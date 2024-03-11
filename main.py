@@ -126,10 +126,10 @@ async def handle_message(m: Message):
     url = get_urls_from_string(m.text)
     if not url:
         return await m.reply("Please enter a valid url.")
-    check_if = await is_user_on_chat(bot, "@RoldexVerse", m.peer_id)
+    check_if = await is_user_on_chat(bot, "@RoldexVer", m.peer_id)
     if not check_if:
         return await m.reply("Please join @RoldexVerse then send me the link again.")
-    check_if = await is_user_on_chat(bot, "@RoldexVerseChats", m.peer_id)
+    check_if = await is_user_on_chat(bot, "@RoldexVer", m.peer_id)
     if not check_if:
         return await m.reply(
             "Please join @RoldexVerseChats then send me the link again."
